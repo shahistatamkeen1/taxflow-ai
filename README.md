@@ -1,284 +1,687 @@
 # TaxFlow AI
 
-An interactive AI-assisted tax-review prototype built for the AI
-Engineer candidate case study.
+**TaxFlow AI** is an interactive AI-assisted tax preparation and review workspace designed for tax professionals, reviewers, and clients.
 
-TaxFlow AI helps tax professionals prioritize urgent work, inspect
-AI-extracted values, trace those values to exact document evidence,
-resolve uncertainty, and retain human oversight throughout the review
-process.
+The prototype demonstrates how AI-generated tax information can remain **traceable, explainable, reviewable, and correctable** while preserving human oversight throughout the tax-return workflow.
 
-## Live Prototype
+## Live Application
 
-- Live application: ADD_VERCEL_URL
-- GitHub repository: ADD_GITHUB_URL
+- **Live Prototype:** https://taxflow-ai-seven.vercel.app/
+- **GitHub Repository:** https://github.com/shahistatamkeen1/taxflow-ai
 
-## Case Study Focus
+---
 
-Primary challenge:
+## Project Overview
 
-- Challenge 01 — Source Document Traceability
+AI can reduce the time required to process tax documents, extract financial values, identify inconsistencies, and recommend next actions.
 
-Supporting concepts demonstrated:
+However, tax professionals cannot responsibly rely on AI output unless they can clearly understand:
 
-- Challenge 05 — Role-Aware Experiences
-- Challenge 06 — Return Status and Progress
-- Challenge 07 — An Actionable Dashboard
-- Challenge 08 — Clickable vs. Editable
-- Challenge 10 — Trustworthy AI
-
-> Update this section to reflect the exact challenge or challenges
-> assigned by the recruiting team.
-
-## Product Problem
-
-AI can accelerate tax preparation by extracting values, identifying
-warnings, and recommending next actions. However, tax professionals
-cannot responsibly rely on AI output unless they can understand:
-
-- Where each value came from
-- What evidence supports it
-- How confident the system is
-- What uncertainty exists
-- Whether a transformation was applied
-- How a human can verify or correct it
+- Where each value originated
+- Which document supports the value
+- The exact page and section used
+- How confident the AI is
+- Whether conflicting information exists
+- Whether a calculation or transformation was applied
+- How a human reviewer can verify or correct the result
 - Who performed the final action
+- What the client needs to do next
 
-TaxFlow AI addresses this problem through an evidence-first,
-human-in-the-loop review workflow.
+TaxFlow AI addresses these concerns through an evidence-first, human-in-the-loop tax-review experience.
 
-## Recommended Demo Walkthrough
+---
 
-The strongest demonstration takes approximately two minutes.
+## Case Study Challenges Addressed
 
-1. Open the CPA Dashboard.
-2. Select **Start guided review**.
-3. Choose **Mortgage interest** from the return-field list.
-4. Compare the two conflicting source documents.
-5. Review the AI confidence, warning, explanation, and recommended action.
-6. Select **Correct value**.
-7. Enter `$18,240`.
-8. Use the reason:
-   `Confirmed against the lender's annual mortgage summary.`
-9. Save the correction.
-10. Review the original AI value and updated audit history.
-11. Use the role switcher to open the Client experience.
-12. Review the simplified task and return-progress views.
+The prototype addresses all ten challenge areas presented in the case study.
 
-## Main Features
+### Challenge 01 — Source Document Traceability
 
-### Action-oriented CPA dashboard
+Each AI-generated tax value can be traced to:
 
-- Returns ranked by urgency, status, deadline, and action ownership
-- Client, priority, and owner filters
-- Direct navigation from summary to action
-- Recommended guided demonstration
+- The related source document
+- The exact document page
+- The relevant form section or box
+- The extracted source text
+- Additional supporting documents
+- Any calculation or transformation applied
 
-### Source-document traceability
+The return-review workspace keeps the tax value and supporting evidence visible together.
 
-- Return field linked to the supporting document
-- Exact document page and section
-- Highlighted extracted evidence
-- Multiple evidence-source comparison
-- Calculation and transformation steps
+### Challenge 02 — Contextual Collaboration
 
-### Trustworthy AI interaction model
-
-- AI-generated value
-- Confidence level and score
-- Supporting evidence
-- Explanation of what the AI did
-- Visible uncertainty and warnings
-- Recommended next action
-- Human verification and correction controls
-
-### Human oversight and audit history
-
-- Verify extracted values
-- Correct AI output
-- Preserve the original AI value
-- Require a correction reason
-- Record reviewer identity and timestamp
-- Undo the latest change
-- Create client clarification requests
-
-### Role-aware experience
-
-The same application shell adapts to:
-
-- CPA / Preparer
-- Reviewer
-- Client
-
-Professional users receive evidence, confidence, internal statuses,
-correction tools, and audit history. Clients receive plain-language
-tasks, document requests, and return progress without unnecessary
-internal complexity.
-
-### Document intelligence
-
-- Search and filtering
-- Document-status indicators
-- Extraction confidence
-- Extracted-field counts
-- AI document summaries
-- Source-evidence previews
-- Related-return navigation
-
-### Client action center
-
-- Clear next action
-- Simulated document upload
-- Outstanding tasks
-- Task completion
-- Return-progress timeline
-- Plain-language ownership and status
-
-## Edge Cases Demonstrated
+Collaboration is connected to the exact tax issue rather than placed in a disconnected inbox.
 
 The prototype includes:
 
-- High-confidence direct extraction
+- Client clarification requests
+- Supporting-document requests
+- Request ownership
+- Due dates
+- Related tax-return fields
+- Request statuses
+- Client-facing messages and tasks
+- Activity-history updates
+
+### Challenge 03 — Clear First-Run Guidance
+
+The experience immediately communicates the next most important action.
+
+Examples include:
+
+- A recommended guided review on the CPA dashboard
+- Priority-ranked tax returns
+- A clear next-action owner
+- A client homepage with one primary task
+- Outstanding-task summaries
+- Return-progress guidance
+
+### Challenge 04 — Navigation and Context
+
+Users can move through the application without losing their place or role context.
+
+The prototype includes:
+
+- Role-aware sidebar navigation
+- Active-route highlighting
+- Return-to-dashboard navigation
+- Related-return links
+- Contextual document previews
+- Consistent page titles and descriptions
+- Responsive mobile navigation
+
+### Challenge 05 — Role-Aware Experiences
+
+The interface adapts to three user roles:
+
+- **Preparer**
+- **Reviewer**
+- **Client**
+
+Preparers and reviewers receive detailed evidence, AI confidence, internal warnings, correction tools, and audit history.
+
+Clients receive simplified tasks, document requests, messages, and return progress without unnecessary internal tax-review complexity.
+
+### Challenge 06 — Return Status and Progress
+
+The application communicates:
+
+- Current return status
+- Overall completion percentage
+- Verified-field count
+- Outstanding tasks
+- Next action
+- Next-action owner
+- Completed stages
+- Current stage
+- Upcoming stages
+
+Statuses use plain language, icons, and text rather than relying only on color.
+
+### Challenge 07 — An Actionable Dashboard
+
+The CPA dashboard is designed around decisions and actions instead of passive statistics.
+
+It includes:
+
+- Priority-ranked returns
+- Urgency indicators
+- Return progress
+- Assigned owner
+- Deadline information
+- Next action
+- Next-action ownership
+- Search
+- Priority filters
+- Owner filters
+- Direct access to the return-review workflow
+- A recommended guided demonstration
+
+### Challenge 08 — Clickable vs. Editable
+
+The prototype clearly distinguishes between information that can be viewed and information that can be changed.
+
+Users can:
+
+- Select tax-return fields
+- Switch between source documents
+- Verify extracted values
+- Correct AI-generated values
+- Enter a required correction reason
+- Undo the latest field change
+- Submit client clarification requests
+- Search and filter documents
+- Complete client tasks
+- Simulate a document upload
+
+Editable actions use clearly labeled controls and visible confirmation states.
+
+### Challenge 09 — Managing Complexity
+
+Complex tax information is organized through progressive disclosure and contextual layouts.
+
+The application uses:
+
+- A three-panel tax-review workspace
+- Grouped tax-return sections
+- Role-specific navigation
+- Expandable source evidence
+- Contextual warnings
+- Conditional calculation details
+- Document-review sheets
+- Simplified client interfaces
+- Responsive stacked layouts on smaller screens
+
+Users see detailed information only when it is relevant to their current task.
+
+### Challenge 10 — Trustworthy AI
+
+The prototype does not present AI confidence as proof of correctness.
+
+Each AI-assisted result can include:
+
+- The generated value
+- Confidence score
+- Confidence label
+- Supporting evidence
+- Source location
+- Warning or uncertainty
+- Explanation of the AI process
+- Recommended human action
+- Verification controls
+- Correction controls
+- Original-value preservation
+- Reviewer identity
+- Timestamp
+- Audit-history event
+
+Human reviewers remain responsible for the final decision.
+
+---
+
+## Recommended Demo Walkthrough
+
+The main demonstration takes approximately two to three minutes.
+
+1. Open the CPA dashboard.
+2. Select **Start Guided Review**.
+3. Open the **Mortgage Interest** field.
+4. Compare the two conflicting lender documents.
+5. Review the AI confidence, warning, explanation, and recommended action.
+6. Select **Correct Value**.
+7. Enter:
+
+   ```text
+   $18,240
+   ```
+
+8. Enter the correction reason:
+
+   ```text
+   Confirmed against the lender's annual mortgage summary.
+   ```
+
+9. Save the correction.
+10. Confirm that the original AI value remains visible.
+11. Review the updated activity history.
+12. Use **Undo Last Change** to demonstrate recoverability.
+13. Select the Client role.
+14. Review the simplified client homepage, tasks, documents, and return progress.
+
+---
+
+## Main Features
+
+### CPA Dashboard
+
+- Action-oriented return queue
+- Priority scoring
+- Search and filtering
+- Return progress
+- Assigned preparer
+- Deadline visibility
+- Next-action ownership
+- Guided demonstration entry point
+
+### Tax-Return Review Workspace
+
+- Tax fields grouped by section
+- AI-generated values
+- Confidence scores
+- Confidence labels
+- Review statuses
+- Source-document previews
+- Exact page and section references
+- Highlighted evidence
+- Multiple-source comparison
+- AI explanations
+- Recommended actions
+- Calculation and transformation details
+
+### Human Review Controls
+
+- Verify extracted values
+- Correct AI-generated values
+- Require a correction reason
+- Preserve the original AI value
+- Record reviewer identity
+- Record timestamps
+- Update activity history
+- Undo the most recent field action
+
+### Document Intelligence
+
+- Search documents
+- Filter by status
+- Filter by document type
+- AI extraction confidence
+- Extracted-field totals
+- Document warnings
+- Document summaries
+- Evidence previews
+- Related-return navigation
+- Role-aware document visibility
+
+### Client Requests and Collaboration
+
+- Open requests
+- Waiting-on-client statuses
+- Request ownership
+- Due dates
+- Related tax fields
+- Clarification requests
+- Supporting-document requests
+- Contextual collaboration
+
+### Client Experience
+
+- Clear next action
+- Outstanding-task count
+- Return progress
+- Simulated document upload
+- Client task completion
+- Tax-return timeline
+- Plain-language statuses
+- Next-action ownership
+- Client-specific document list
+
+### Responsive Interface
+
+The application supports:
+
+- Desktop layouts
+- Tablet layouts
+- Mobile navigation
+- Stacked review panels
+- Responsive cards
+- Responsive filters
+- Mobile-friendly dialogs and document previews
+
+---
+
+## Edge Cases Demonstrated
+
+The prototype includes multiple scenarios beyond the ideal success path:
+
+- High-confidence extraction
 - Medium-confidence extraction
-- Low-quality document
+- Low-confidence extraction
+- Blurred document image
 - Conflicting source documents
-- Multiple-source calculated value
+- Multiple-document calculated value
 - Missing supporting evidence
-- Human-corrected AI result
-- Verified result
+- Missing document pages
+- Human-corrected AI value
+- Verified value
 - Client clarification request
+- Supporting-document request
 - Empty search results
-- Missing return
-- Completed and outstanding client tasks
+- Missing tax return
+- Completed client task
+- Outstanding client task
+- Undoable field change
 
-## What Is Genuinely Functional
+---
 
-The following interactions are implemented in the frontend:
+## What Is Fully Functional
+
+The following frontend interactions are implemented:
 
 - Application navigation
-- Responsive desktop and mobile shell
+- Responsive sidebar
+- Mobile menu
 - Role switching
-- Dashboard search and filtering
-- Priority ranking
+- Role-aware navigation
+- Dashboard search
+- Dashboard filters
+- Priority-ranked returns
 - Return-field selection
-- Source-document switching
-- AI explanation rendering
+- Source-document selection
+- Multiple-source comparison
 - Confidence and warning states
+- AI explanation rendering
+- Calculation-step rendering
 - Value verification
 - Value correction
 - Correction-reason capture
 - Original-value preservation
+- Reviewer and timestamp display
 - Undo workflow
 - Activity-history updates
 - Client clarification requests
-- Document search and filtering
-- Document-preview sheets
+- Document search
+- Document filtering
+- Document preview sheets
+- Related-return navigation
 - Client task completion
-- Simulated client file selection and upload success
+- Simulated file selection
+- Upload success state
+- Client progress timeline
+- Empty states
+- Not-found states
+
+---
 
 ## What Is Simulated
 
-The following capabilities use realistic mock data:
+The following capabilities use realistic mock data for demonstration:
 
-- OCR and document parsing
+- OCR
+- Document parsing
 - AI inference
 - Confidence-score generation
 - Tax calculations
+- Tax-law validation
 - Authentication
 - Authorization enforcement
 - Persistent database storage
-- File storage
-- Email and external notifications
-- Tax-law validation
-- Production audit logging
+- Real file storage
+- Email delivery
+- Client notifications
+- Production audit storage
+- External tax-software integrations
 
-The prototype intentionally prioritizes the frontend interaction model,
-information architecture, and AI trust experience.
+The prototype intentionally prioritizes frontend usability, information architecture, interaction design, responsible AI presentation, and human oversight.
+
+---
 
 ## Key Design Decisions
 
-### Side-by-side evidence review
+### Evidence Before Automation
 
-Return fields and supporting evidence remain visible in the same
-workspace. This reduces context switching and allows reviewers to
-validate AI output without losing their place.
+AI-generated values are never shown without a way to inspect their evidence.
 
-### Evidence instead of confidence alone
+The interface connects each value to the exact document, page, section, and extracted text used by the system.
 
-A confidence score is never presented as proof of correctness. Each
-result includes supporting evidence, uncertainty, and a recommended
-human action.
+### Confidence Is Not Correctness
 
-### Progressive AI transparency
+Confidence scores are used as review guidance, not as proof that a value is correct.
 
-The default interface provides the result, confidence, evidence,
-warning, and next action. Calculation details appear only when they are
-relevant.
+Low-confidence and conflicting results include visible warnings and recommended human actions.
 
-### Corrections preserve history
+### Human Corrections Preserve History
 
-Human corrections do not silently overwrite AI output. The prototype
-retains the original value, corrected value, correction reason,
-reviewer identity, timestamp, and audit event.
+Correcting an AI-generated value does not silently overwrite the original result.
 
-### Contextual collaboration
+The interface preserves:
 
-Document requests and clarification actions are connected to the exact
-tax field or evidence issue rather than being placed in a disconnected
-inbox.
+- Original AI value
+- Corrected value
+- Correction reason
+- Reviewer identity
+- Timestamp
+- Audit event
 
-### Role-aware complexity
+### Contextual Collaboration
 
-CPA and reviewer users receive detailed professional controls. Clients
-receive simplified instructions, progress, and document requests.
+Questions and requests are connected to the exact return field or document issue that caused them.
 
-### Accessible status communication
+This reduces ambiguity for both the tax professional and the client.
 
-Statuses use text, icons, and styling together instead of relying on
-color alone.
+### Role-Aware Complexity
+
+Professional users receive detailed tax-review tools, while clients receive simplified tasks and progress information.
+
+### Progressive Disclosure
+
+Detailed AI explanations, calculations, source documents, and activity history appear only where they are useful.
+
+### Accessible Status Communication
+
+Statuses use a combination of:
+
+- Text
+- Icons
+- Labels
+- Visual styling
+
+The interface does not rely only on color to communicate meaning.
+
+---
 
 ## Technology Stack
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- shadcn/ui with Base UI
-- Lucide icons
-- Local typed mock data
-- React state and local storage
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui with Base UI**
+- **Lucide React**
+- **React Context**
+- **Local typed mock data**
+- **Vercel**
+
+---
 
 ## Project Structure
 
 ```text
-app/
-├── client/
-├── dashboard/
-├── documents/
-├── requests/
-├── returns/
-├── layout.tsx
-└── page.tsx
+taxflow-ai/
+├── app/
+│   ├── client/
+│   │   ├── progress/
+│   │   ├── tasks/
+│   │   └── page.tsx
+│   ├── dashboard/
+│   ├── documents/
+│   ├── requests/
+│   ├── returns/
+│   │   └── [returnId]/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── layout/
+│   ├── return-review/
+│   └── ui/
+│
+├── data/
+│   ├── clients.ts
+│   ├── documents.ts
+│   ├── returns.ts
+│   └── users.ts
+│
+├── lib/
+│   ├── priority.ts
+│   └── utils.ts
+│
+├── public/
+├── types/
+│   └── index.ts
+│
+├── components.json
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
+```
 
-components/
-├── ai/
-├── collaboration/
-├── dashboard/
-├── documents/
-├── layout/
-├── return-review/
-├── shared/
-└── ui/
+---
 
-data/
-├── clients.ts
-├── documents.ts
-├── returns.ts
-└── users.ts
+## Installation and Local Setup
 
-lib/
-├── priority.ts
-└── utils.ts
+### Prerequisites
 
-types/
-└── index.ts
+Install the following before running the project:
+
+- A recent LTS version of Node.js
+- npm
+- Git
+
+Verify the installation:
+
+```bash
+node --version
+npm --version
+git --version
+```
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/shahistatamkeen1/taxflow-ai.git
+```
+
+Navigate into the project:
+
+```bash
+cd taxflow-ai
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open the application:
+
+```text
+http://localhost:3000
+```
+
+No environment variables, API keys, external databases, or backend services are required.
+
+---
+
+## Available Commands
+
+### Start Development Mode
+
+```bash
+npm run dev
+```
+
+### Run ESLint
+
+```bash
+npm run lint
+```
+
+### Create a Production Build
+
+```bash
+npm run build
+```
+
+### Start the Production Build
+
+Run this after `npm run build`:
+
+```bash
+npm start
+```
+
+---
+
+## Production Validation
+
+Before deployment or review, run:
+
+```bash
+npm run lint
+npm run build
+npm start
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+Test the following routes:
+
+```text
+/dashboard
+/returns
+/returns/return-jordan-2025
+/documents
+/requests
+/client
+/client/tasks
+/client/progress
+```
+
+---
+
+## Deployment
+
+The application is deployed on Vercel:
+
+https://taxflow-ai-seven.vercel.app/
+
+The project does not require environment variables because all prototype data and AI responses are simulated locally.
+
+---
+
+## Future Production Improvements
+
+With additional development time, the next production phases would include:
+
+- Secure authentication
+- Fine-grained role-based permissions
+- Real document upload
+- Encrypted object storage
+- OCR integration
+- Document-understanding models
+- LLM-based explanations
+- Tax-rule validation
+- Persistent relational database
+- Immutable audit logging
+- Client email notifications
+- Background document processing
+- Human-feedback collection
+- Automated frontend tests
+- Accessibility testing
+- Monitoring and observability
+- Tax-software integrations
+- Data-retention and privacy controls
+
+---
+
+## Privacy and Data Notice
+
+All names, clients, tax documents, financial values, statuses, messages, and return details in this application are fictional.
+
+No real taxpayer information is included.
+
+---
+
+## Author
+
+**Shahista Tamkeen**
+
+- GitHub: https://github.com/shahistatamkeen1
+- Portfolio: https://shahistatamkeen1.github.io/portfolio/
+- LinkedIn: https://www.linkedin.com/in/shahista-tamkeen/
